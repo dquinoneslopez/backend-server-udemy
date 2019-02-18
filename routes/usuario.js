@@ -4,6 +4,7 @@ var jwt = require('jsonwebtoken');
 
 var mdAutenticacion = require('../middleware/autenticacion');
 
+
 var app = express();
 
 var Usuario = require('../models/usuario');
@@ -108,7 +109,7 @@ app.put('/:id', mdAutenticacion.verificaToken, (req, res) => {
 //================================================
 // Crear nuevo usuario
 //================================================
-app.post('/', mdAutenticacion.verificaToken, (req, res, next) => {
+app.post('/', (req, res, next) => {
 
     var body = req.body;
     var usuario = new Usuario({
