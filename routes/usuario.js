@@ -19,7 +19,7 @@ app.get('/', (req, res, next) => {
     desde = Number(desde);
 
     // https://es.wikipedia.org/wiki/Anexo:C%C3%B3digos_de_estado_HTTP
-    Usuario.find({}, 'nombre email img role')
+    Usuario.find({}, 'nombre email img role google')
         .skip(desde)
         .limit(5)
         .exec(
