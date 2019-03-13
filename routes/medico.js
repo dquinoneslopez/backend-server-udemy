@@ -56,7 +56,7 @@ app.get('/', (req, res, next) => {
 });
 
 //================================================
-// Obtener todos los médicos
+// Obtener médico por id
 //================================================
 app.get('/:id', (req, res) => {
 
